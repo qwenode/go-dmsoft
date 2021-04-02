@@ -6,6 +6,11 @@ func (com *DmSoft) FindString(hwnd int, addrRange string,stringValue string,sear
 	str,_:=com.dm.CallMethod("FindString",hwnd,addrRange,stringValue,searchType)
 	return str.ToString()
 }
+
+func (com *DmSoft) SetMemoryHwndAsProcessId(en int) int {
+	i,_:=com.dm.CallMethod("SetMemoryHwndAsProcessId",en)
+	return int(i.Val)
+}
 // string DoubleToData(value)
 // string FindData(hwnd, addr_range, data)
 // string FindDataEx(hwnd, addr_range, data,step,multi_thread,mode)
