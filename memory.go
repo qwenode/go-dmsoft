@@ -3,7 +3,7 @@
 package dmsoft
 
 func (com *DmSoft) FindString(hwnd int, addrRange string,stringValue string,searchType int) string  {
-	str:=com.dm.CallMethod("FindString",hwnd,addrRange,stringValue,searchType)
+	str,_:=com.dm.CallMethod("FindString",hwnd,addrRange,stringValue,searchType)
 	return str
 }
 // string DoubleToData(value)
